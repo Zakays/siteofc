@@ -1,0 +1,205 @@
+export interface Site {
+  id: string;
+  title: string;
+  description: string;
+  url: string;
+  category: string;
+  categoryId: string;
+  favicon?: string;
+}
+
+export interface Category {
+  id: string;
+  name: string;
+  color: string;
+}
+
+export const categories: Category[] = [
+  { id: 'bcdcd9ca-ffd1-415d-bf7a-e812b2e2fa6a', name: 'IA e Automação', color: 'rgb(139, 92, 246)' },
+  { id: 'f50d6488-29eb-43d2-8b6a-348d1a2bbe90', name: 'Criação de Conteúdo', color: 'rgb(236, 72, 153)' },
+  { id: 'bab3f628-cbd2-468e-856e-dee704c68a33', name: 'Ferramentas e Produtividade', color: 'rgb(59, 130, 246)' },
+  { id: '4cec12d0-79ad-4f6f-a711-a78dc2d219f9', name: 'Jogos', color: 'rgb(16, 185, 129)' },
+  { id: '954cd15f-72a1-49f5-9900-6338411f2413', name: 'Educação e Cursos', color: 'rgb(245, 158, 11)' },
+  { id: 'a8e415d8-0a77-47cc-bf4a-2972803a4257', name: 'Livros e Leitura', color: 'rgb(239, 68, 68)' },
+  { id: '4d75d096-271b-46d7-8dea-4a109438bdcd', name: 'Desenvolvimento', color: 'rgb(6, 182, 212)' },
+  { id: 'd2809acf-8779-46a2-8253-a78b99d2d68d', name: 'Design', color: 'rgb(236, 72, 153)' },
+  { id: '9d530a41-510a-4f03-9f63-140f5c377761', name: 'Outros', color: 'rgb(100, 116, 139)' }
+];
+
+export const sites: Site[] = [
+  // IA e Automação
+  { id: 'c5e7be5c-b498-4e76-84c4-3a2535fb3263', title: 'Hacker AI', description: 'Ferramentas de IA para hackers e desenvolvedores', url: 'https://hackerai.co/', category: 'IA e Automação', categoryId: 'bcdcd9ca-ffd1-415d-bf7a-e812b2e2fa6a' },
+  { id: '6a88a572-11ab-4c8c-b9df-234532ade97e', title: 'Genspark AI', description: 'Plataforma de IA generativa', url: 'https://genspark.ai/', category: 'IA e Automação', categoryId: 'bcdcd9ca-ffd1-415d-bf7a-e812b2e2fa6a' },
+  { id: 'cd0c68f5-52be-4003-a363-592bd147f44f', title: 'Airia', description: 'Assistente de IA empresarial', url: 'https://airia.com/', category: 'IA e Automação', categoryId: 'bcdcd9ca-ffd1-415d-bf7a-e812b2e2fa6a' },
+  { id: '5d8172f9-3491-42c9-abf8-41c482b2053f', title: 'Salesmartly', description: 'Automação de vendas com IA', url: 'https://app.salesmartly.com/', category: 'IA e Automação', categoryId: 'bcdcd9ca-ffd1-415d-bf7a-e812b2e2fa6a' },
+  { id: '4a6aa0c4-7bdf-4d5a-b044-f409af3acb10', title: 'Autocoder', description: 'Gerador de código com IA', url: 'https://autocoder.cc/', category: 'IA e Automação', categoryId: 'bcdcd9ca-ffd1-415d-bf7a-e812b2e2fa6a' },
+  { id: '99bb9be5-d7fd-4750-a77d-95ab7118e24b', title: 'Skywork AI', description: 'Plataforma de IA chinesa', url: 'https://skywork.ai/', category: 'IA e Automação', categoryId: 'bcdcd9ca-ffd1-415d-bf7a-e812b2e2fa6a' },
+  { id: '4973954d-c693-4b2b-820c-77b9b7cda40d', title: 'DeepSeek', description: 'Motor de busca com IA', url: 'https://deepseek.com/', category: 'IA e Automação', categoryId: 'bcdcd9ca-ffd1-415d-bf7a-e812b2e2fa6a' },
+  { id: '48bc3056-20a6-443b-8f99-c3ba07db2e00', title: 'Abacus AI', description: 'Chat com modelos de linguagem', url: 'https://chatllm.abacus.ai/', category: 'IA e Automação', categoryId: 'bcdcd9ca-ffd1-415d-bf7a-e812b2e2fa6a' },
+  { id: '0ba5f54d-fccd-4d11-82cc-ba38718c43bc', title: 'Buildcores', description: 'Construtor de aplicações com IA', url: 'https://buildcores.com/', category: 'IA e Automação', categoryId: 'bcdcd9ca-ffd1-415d-bf7a-e812b2e2fa6a' },
+  { id: '3555392b-06d6-4015-bd7c-39e2d60ab282', title: 'Hugging Face DeepSite', description: 'Modelos de IA open source', url: 'https://huggingface.co/deepsite', category: 'IA e Automação', categoryId: 'bcdcd9ca-ffd1-415d-bf7a-e812b2e2fa6a' },
+  { id: '5a8f862b-0a2d-4d18-ac60-c7471ccea591', title: 'Grok', description: 'Assistente de IA do X (Twitter)', url: 'https://gork.com/', category: 'IA e Automação', categoryId: 'bcdcd9ca-ffd1-415d-bf7a-e812b2e2fa6a' },
+  { id: '5ffa127b-5120-4b33-aaed-07fdc4b14483', title: 'Skynet Chat', description: 'Chat com IA avançada', url: 'https://skynetchat.net/', category: 'IA e Automação', categoryId: 'bcdcd9ca-ffd1-415d-bf7a-e812b2e2fa6a' },
+  { id: '1d0da7d2-a52f-4151-99ae-0d3ed137f425', title: 'Artificial Analysis', description: 'Análise e comparação de IAs', url: 'https://artificialanalysis.ai/', category: 'IA e Automação', categoryId: 'bcdcd9ca-ffd1-415d-bf7a-e812b2e2fa6a' },
+  { id: 'b6ee6315-0e59-4fc1-ac4b-fbe78a0a91e9', title: 'Anara', description: 'Ferramentas de IA', url: 'https://anara.so/', category: 'IA e Automação', categoryId: 'bcdcd9ca-ffd1-415d-bf7a-e812b2e2fa6a' },
+
+  // Criação de Conteúdo
+  { id: '3b5a3e2d-4a29-488c-87dd-55a2732ce085', title: 'Pippit AI', description: 'Gerador de vídeos com IA', url: 'https://pippit.ai/', category: 'Criação de Conteúdo', categoryId: 'f50d6488-29eb-43d2-8b6a-348d1a2bbe90' },
+  { id: '9a2902a8-43bc-40c2-beef-63e9d172b9f2', title: 'Motion Backgrounds', description: 'Fundos animados para vídeos', url: 'https://motionbgs.com/', category: 'Criação de Conteúdo', categoryId: 'f50d6488-29eb-43d2-8b6a-348d1a2bbe90' },
+  { id: 'ac9ca47b-946a-4b65-abda-8b689b910a39', title: 'Moewalls', description: 'Wallpapers animados', url: 'https://moewalls.com/', category: 'Criação de Conteúdo', categoryId: 'f50d6488-29eb-43d2-8b6a-348d1a2bbe90' },
+  { id: '5ca1574c-fd07-451e-915c-e4f892b80763', title: 'Hitem 3D', description: 'Criação de modelos 3D com IA', url: 'https://hitem3d.ai/', category: 'Criação de Conteúdo', categoryId: 'f50d6488-29eb-43d2-8b6a-348d1a2bbe90' },
+  { id: 'e66fe470-099f-4b29-bdb7-a05d25d5b8a9', title: 'Flowith', description: 'Editor de vídeo com IA', url: 'https://flowith.io/', category: 'Criação de Conteúdo', categoryId: 'f50d6488-29eb-43d2-8b6a-348d1a2bbe90' },
+  { id: 'b55db1f3-d1ed-4387-8e40-ad2696d2be1e', title: 'Dreamina CapCut', description: 'Edição de vídeo CapCut', url: 'https://dreamina.capcut.com/', category: 'Criação de Conteúdo', categoryId: 'f50d6488-29eb-43d2-8b6a-348d1a2bbe90' },
+  { id: 'caa3eb3c-b047-4cb7-a315-87386975ea49', title: 'VMEG AI', description: 'Gerador de vídeos', url: 'https://vmeg.ai/', category: 'Criação de Conteúdo', categoryId: 'f50d6488-29eb-43d2-8b6a-348d1a2bbe90' },
+  { id: '65fb1fa4-8495-491d-a625-64e3a8550679', title: 'Animagraffs', description: 'Animações técnicas e educacionais', url: 'https://animagraffs.com/', category: 'Criação de Conteúdo', categoryId: 'f50d6488-29eb-43d2-8b6a-348d1a2bbe90' },
+  { id: '199814c8-0cc9-45ce-b139-2d74d50f5b08', title: 'Nemo Video', description: 'Criação de vídeos', url: 'https://nemovideo.com/', category: 'Criação de Conteúdo', categoryId: 'f50d6488-29eb-43d2-8b6a-348d1a2bbe90' },
+  { id: '9d42c749-a574-4bb7-bd72-3c5f814e1909', title: 'Napkin AI', description: 'Gerador de diagramas visuais', url: 'https://napkin.ai/', category: 'Criação de Conteúdo', categoryId: 'f50d6488-29eb-43d2-8b6a-348d1a2bbe90' },
+  { id: '3c495b1c-cfbc-4dbe-9dad-79cffe811aa2', title: 'Creatoom', description: 'Criação de apresentações', url: 'https://creatoom.com/', category: 'Criação de Conteúdo', categoryId: 'f50d6488-29eb-43d2-8b6a-348d1a2bbe90' },
+  { id: '7e8ea137-a9a3-4c0b-8fec-f12023dbf597', title: 'Logo Diffusion', description: 'Gerador de logos com IA', url: 'https://logodiffusion.com/', category: 'Criação de Conteúdo', categoryId: 'f50d6488-29eb-43d2-8b6a-348d1a2bbe90' },
+  { id: '8a12ab1f-6dbc-4393-925e-323ca53d93aa', title: 'Fake Detail', description: 'Gerador de imagens detalhadas', url: 'https://fakedetail.com/', category: 'Criação de Conteúdo', categoryId: 'f50d6488-29eb-43d2-8b6a-348d1a2bbe90' },
+  { id: 'ffa9f70a-3f11-490b-9f0c-784513f55a62', title: 'Lovart AI', description: 'Geração de arte com IA', url: 'https://lovart.ai/', category: 'Criação de Conteúdo', categoryId: 'f50d6488-29eb-43d2-8b6a-348d1a2bbe90' },
+  { id: '069b15d4-6331-4385-beb1-69fc16ba00f2', title: 'Kling AI', description: 'Geração de vídeos com IA', url: 'https://klingai.com/', category: 'Criação de Conteúdo', categoryId: 'f50d6488-29eb-43d2-8b6a-348d1a2bbe90' },
+  { id: '92489912-abfd-459d-b9e9-b6b0d3d5943e', title: 'Clip Cafe', description: 'Editor de clipes de vídeo', url: 'https://clip.cafe/', category: 'Criação de Conteúdo', categoryId: 'f50d6488-29eb-43d2-8b6a-348d1a2bbe90' },
+  { id: 'aa32e571-c0be-4a88-ac5f-fb9d0090d1df', title: 'Rosebud AI', description: 'Criação de games com IA', url: 'https://rosebud.ai/', category: 'Criação de Conteúdo', categoryId: 'f50d6488-29eb-43d2-8b6a-348d1a2bbe90' },
+  { id: '53ca4b08-4ab8-4ea5-a653-bc2a76819680', title: 'Vizard', description: 'Editor de vídeo automático', url: 'https://vizard.ai/', category: 'Criação de Conteúdo', categoryId: 'f50d6488-29eb-43d2-8b6a-348d1a2bbe90' },
+  { id: 'cb070922-6ebe-4cb8-8a4d-c6dde1fa07be', title: 'Paper Animator', description: 'Animação de desenhos', url: 'https://paperanimator.com/', category: 'Criação de Conteúdo', categoryId: 'f50d6488-29eb-43d2-8b6a-348d1a2bbe90' },
+  { id: 'b1f79e72-8112-4675-be31-93fc418064ca', title: 'Flux1 AI', description: 'Gerador de imagens', url: 'https://flux1.ai/', category: 'Criação de Conteúdo', categoryId: 'f50d6488-29eb-43d2-8b6a-348d1a2bbe90' },
+  { id: '726180e5-b3e6-4917-af99-bf7a8987ba10', title: 'AI Ease', description: 'Ferramentas de IA simplificadas', url: 'https://aiease.ai/', category: 'Criação de Conteúdo', categoryId: 'f50d6488-29eb-43d2-8b6a-348d1a2bbe90' },
+  { id: '65ae7683-6354-49b9-b7c4-a10d32c65295', title: 'Hunyuan Video', description: 'Criação de vídeos Tencent', url: 'https://hunyuanvideo.org/pt/create', category: 'Criação de Conteúdo', categoryId: 'f50d6488-29eb-43d2-8b6a-348d1a2bbe90' },
+  { id: '67587339-d110-46d0-bb1a-a8817680bdf3', title: 'Pikzels', description: 'Edição de imagens', url: 'https://pikzels.com/', category: 'Criação de Conteúdo', categoryId: 'f50d6488-29eb-43d2-8b6a-348d1a2bbe90' },
+  { id: 'e5da8b41-85fc-46bd-a937-0391c30491d7', title: 'Nim Video', description: 'Plataforma de vídeo', url: 'https://nim.video/', category: 'Criação de Conteúdo', categoryId: 'f50d6488-29eb-43d2-8b6a-348d1a2bbe90' },
+  { id: 'c26c369c-48bc-400d-ad87-ea9d77302d5c', title: 'Recraft AI', description: 'Geração de design', url: 'https://recraft.ai/', category: 'Criação de Conteúdo', categoryId: 'f50d6488-29eb-43d2-8b6a-348d1a2bbe90' },
+  { id: 'b06ab00c-77dd-463e-8377-e670a578d901', title: 'Neamx', description: 'Criação de conteúdo', url: 'https://neamx.com/', category: 'Criação de Conteúdo', categoryId: 'f50d6488-29eb-43d2-8b6a-348d1a2bbe90' },
+  { id: 'cf3ff4c5-cd62-4d67-b218-1dc0c004183a', title: 'Hunyuan 3D', description: 'Modelagem 3D Tencent', url: 'https://3d.hunyuan.tencent.com/', category: 'Criação de Conteúdo', categoryId: 'f50d6488-29eb-43d2-8b6a-348d1a2bbe90' },
+  { id: '7626bb23-c153-4e26-947c-82b44afbdd98', title: 'Meshy AI', description: 'Geração de modelos 3D', url: 'https://meshy.ai/', category: 'Criação de Conteúdo', categoryId: 'f50d6488-29eb-43d2-8b6a-348d1a2bbe90' },
+  { id: '98a9dbe8-d99e-4bb8-bd0b-69b0e810540b', title: 'Collov AI', description: 'Design de interiores com IA', url: 'https://collov.ai/', category: 'Criação de Conteúdo', categoryId: 'f50d6488-29eb-43d2-8b6a-348d1a2bbe90' },
+
+  // Ferramentas e Produtividade
+  { id: '4791362d-b062-45b9-b9f0-fc066a0531c7', title: 'LightPDF', description: 'Editor e conversor de PDF online', url: 'https://lightpdf.com/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '3e08395e-f229-429b-ac53-3a9e2df631af', title: 'Runable', description: 'Ambiente de execução de código', url: 'https://runable.com/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: 'b19cdd1c-5ce0-4e69-b572-7fa5800e2624', title: 'FastMoss', description: 'Ferramenta de pesquisa rápida', url: 'https://fastmoss.com/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '51be11de-7209-4e6c-96c9-1190fd3603f8', title: 'SoBrief', description: 'Resumidor de textos', url: 'https://sobrief.com/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: 'ab631fd6-fccd-47c3-bdc1-79b54326977f', title: 'Coddy Tech', description: 'Aprendizado de programação', url: 'https://coddy.tech/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: 'd148ae08-ae68-40df-8a64-944012582c6e', title: '123Apps', description: 'Conjunto de ferramentas online', url: 'https://123apps.com/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: 'f679af30-3704-466b-8d76-54cdf580ccca', title: 'ToolFX', description: 'Ferramentas variadas', url: 'https://toolfx.com/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '364f97be-32b8-46fe-97cb-8500cc49ec1c', title: 'Kimi', description: 'Assistente de produtividade', url: 'https://kimi.com/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: 'd1d9efa0-a3aa-483b-9418-6e78615c9c2a', title: 'Gambo IA', description: 'Ferramentas de IA brasileiras', url: 'https://gambo.ia/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '2b3088cf-3a03-4941-a296-b3372c88bf4a', title: 'Rocket New', description: 'Lançador de projetos rápidos', url: 'https://rocket.new/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '3d22f941-0035-4e31-8224-47138a385abb', title: 'Home By Me', description: 'Design de interiores 3D', url: 'https://home.by.me/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '2624c9c5-af42-44a7-9e7b-a4625a927d8b', title: 'Hive Moderation', description: 'Moderação de conteúdo', url: 'https://hivemoderation.com/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '487fed79-1d2d-4521-aadc-202d99e101b9', title: 'DDevi', description: 'Ferramentas de desenvolvedor', url: 'https://ddevi.com/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: 'b2a2e08a-7445-49d8-a24d-5a537fecce61', title: 'Ryne AI', description: 'Assistente de IA', url: 'https://ryne.ai/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '91d3ed66-5778-440c-8cc5-ee40b992e47e', title: 'GPTZero', description: 'Detector de texto gerado por IA', url: 'https://gptzero.me/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '7e60db1b-d0cb-4242-adbf-6f033f97e974', title: 'LMArena', description: 'Arena de modelos de linguagem', url: 'https://lmarena.ai/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '93008cf1-7ad0-43f7-9dd2-8d2c609051ef', title: 'BioDigital Human', description: 'Anatomia humana 3D interativa', url: 'https://human.biodigital.com/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '6e3e88d2-07a6-4588-8eeb-1ee61715a7df', title: 'Undetectable AI', description: 'Humanizador de texto IA', url: 'https://undetectable.ai/smart-applier', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '9f15d78f-ca6e-4580-8537-2c5f45c1d824', title: 'Readdy AI', description: 'Leitor de documentos com IA', url: 'https://readdy.ai/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: 'e2142419-4316-43a4-a838-c43ebe541b78', title: 'GPT Excel', description: 'Gerador de fórmulas Excel', url: 'https://gptexcel.uk/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '69db6a33-3d98-4ddb-82df-fecaece978cc', title: 'Storm MCP', description: 'Plataforma de IA', url: 'https://stormmcp.ai/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '05aae304-dfbf-4093-a170-4d3f58738018', title: 'Magic Light AI', description: 'Ferramentas de iluminação', url: 'https://magiclight.ai/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: 'e6cdc4c6-bfa2-4fd5-a556-1049783283db', title: 'Emergent', description: 'Plataforma de desenvolvimento com IA', url: 'https://app.emergent.sh/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '8266ab0d-efb3-421c-8dfa-2447015aef66', title: 'Freepik', description: 'Banco de imagens e recursos', url: 'https://freepik.com/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: 'f2537a54-b0a4-466c-8d50-c3d6a3a09e3e', title: 'Liber3', description: 'Biblioteca descentralizada', url: 'https://liber3.eth.limo/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: 'dafe3218-92e8-4bd1-a24a-7891f6243f4d', title: 'GeeL Ark', description: 'Gerenciador de apps', url: 'https://geelark.com/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '3079703f-1a25-4f44-ae63-94e58cd52c51', title: 'Humanizar Texto', description: 'Humanizador de texto IA', url: 'https://humanizar-texto.org/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '245d6ac1-f210-4658-8a57-9ffafdba5dd7', title: 'MalPPT', description: 'Criador de apresentações', url: 'https://malppt.com/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: 'df78358e-9e8a-49b7-94d5-48e08bb0893f', title: 'Lum Labs', description: 'Laboratório de IA', url: 'https://lumlabs.ai/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '25d7895f-cf75-4709-a5b6-27b172fbdd7b', title: 'Lecsen', description: 'Plataforma educacional', url: 'https://lecsen.com/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '18ac4bc3-6552-41ca-98e0-09bf228af7af', title: 'Flourish Studio', description: 'Visualização de dados', url: 'https://flourish.studio/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: 'b3cb8496-2ff3-49bc-b049-db56f056c4f4', title: 'Dverso Tools', description: 'Ferramentas variadas', url: 'https://tools.dverso.io/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '405a1417-436f-4b72-8342-275acdc8f781', title: 'Gamma App', description: 'Criação de apresentações', url: 'https://gamma.app/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '3910965e-d6fe-43eb-a5ed-86ee43bb3d05', title: 'MGX Dev', description: 'Ferramentas de desenvolvedor', url: 'https://mgx.dev/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '07b2e721-7634-4059-8f57-29d8ceffeecb', title: 'Remove Photos', description: 'Remoção de fundo de imagens', url: 'https://remove.photos/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '997d2685-4f5a-4214-8b24-80703f738edf', title: 'TopView AI', description: 'Análise de vídeos', url: 'https://topview.ai/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '7066578f-a07b-49eb-bc3e-c75b693622e9', title: 'RecCloud', description: 'Gravação de tela', url: 'https://reccloud.com/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: 'd43c0211-007c-4b93-95f6-ce1d872c83b8', title: 'Memenome', description: 'Organizador de memórias', url: 'https://memenome.com/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '8dec3fee-3aac-4346-92c8-3e183bb2fc8a', title: 'Kickresume', description: 'Criador de currículos', url: 'https://kickresume.com/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '776951eb-06a5-481c-9bd7-f0da9f4d409b', title: 'AIPPT', description: 'Apresentações com IA', url: 'https://aippt.com/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '68852f70-ee09-4a0c-9602-8e056d32cbaa', title: 'Thiings', description: 'Gestão de projetos', url: 'https://thiings.co/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '752aa1d5-2114-46e7-95ee-619dec6315e0', title: 'No More Copyright', description: 'Músicas sem copyright', url: 'https://nomorecopyright.com/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '9420ab4a-b34a-4a24-90ef-7f8dd3ce0c50', title: 'MESS', description: 'Emulador de sistemas antigos', url: 'https://mess.eu.org/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '0d32e338-d07f-4fab-b101-0794b312be9b', title: 'Fast Format', description: 'Formatação de documentos ABNT', url: 'https://fastformat.co/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '144cce90-05a9-4eb0-94d2-6be114812b5e', title: 'Product Hunt', description: 'Descoberta de produtos', url: 'https://producthunt.com/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: 'fe2471f4-728c-4aa9-843b-1b637a161858', title: 'Roadmap.sh', description: 'Roteiros de aprendizado tech', url: 'https://roadmap.sh/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: 'f7ca4655-6016-4622-acb8-b7a0b88adf87', title: 'Fish Audio', description: 'Edição de áudio', url: 'https://fish.audio/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: 'b1cc8a48-07a8-4963-8ebc-50954ffd2aa0', title: 'Layla AI', description: 'Assistente pessoal de IA', url: 'https://layla.ai/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '265cd221-c138-4321-99ea-195dffb6f20f', title: 'Ideogram', description: 'Geração de imagens com texto', url: 'https://ideogram.ai/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '8d12ecb3-d88c-44dd-bda9-62e2becb3c64', title: 'iFixit', description: 'Guias de reparo de eletrônicos', url: 'https://ifixit.com/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '8bb1b747-24db-46d1-8be1-b4ec28cafc18', title: 'Old Maps Online', description: 'Mapas históricos', url: 'https://oldmapsonline.com/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: 'd97b7aa4-a3f5-4717-a98c-d230056442fa', title: 'Ssemble', description: 'Editor de vídeo online', url: 'https://ssemble.com/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '1d473ada-1ff4-4edb-a766-ccac43488cf8', title: 'TinyWow', description: 'Ferramentas PDF, imagem e vídeo', url: 'https://tinywow.com/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '92d16243-d9e0-4a3f-a9d1-5d7df1e567da', title: 'Looka', description: 'Criador de logos', url: 'https://looka.com/logo-maker', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '78201378-89ab-49f5-bbde-e11c76f0b210', title: 'Trace Moe', description: 'Busca reversa de anime', url: 'https://trace.moe/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: 'b4693684-0531-4403-a2be-fc28805ad20c', title: 'Start My Car', description: 'Informações automotivas', url: 'https://startmycar.com/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: 'ec136652-ee3c-40ba-a175-3fa9be7f022f', title: 'Car Care Kiosk', description: 'Manuais automotivos', url: 'https://carcarekiosk.com/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '78d76dfe-53dc-44ad-a329-715a8005cbf4', title: 'Flora Fauna', description: 'Identificador de plantas e animais', url: 'https://florafauna.ai/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: 'f8369caf-91cb-4dd3-868f-3a5d10f2139f', title: 'Stirling PDF', description: 'Ferramentas PDF open source', url: 'https://stirlingpdf.io/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '0858c716-7c4e-43f0-b7d0-68853a7ab035', title: 'Dora Run', description: 'Criação de sites sem código', url: 'https://dora.run/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '8002500a-b2d0-4739-b0ce-b96e4ddc7cd3', title: 'Learn Anything', description: 'Mapa de aprendizado', url: 'https://learn-anything.xyz/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '3e766410-eb2c-45fc-9792-9cb6077c7c1b', title: 'Teleparty', description: 'Assistir vídeos juntos', url: 'https://teleparty.com/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+  { id: '88e9fa31-a40c-4fc0-ae44-d189988b4ee4', title: '3D Tuning', description: 'Customização de carros 3D', url: 'https://3dtuning.com/', category: 'Ferramentas e Produtividade', categoryId: 'bab3f628-cbd2-468e-856e-dee704c68a33' },
+
+  // Jogos
+  { id: '5fbaf145-8234-407f-a6a0-799e8e91b7fe', title: 'Emulator Online', description: 'Emulador de jogos clássicos', url: 'https://emulatoronline.com/', category: 'Jogos', categoryId: '4cec12d0-79ad-4f6f-a711-a78dc2d219f9' },
+  { id: 'd8d227ca-0b9a-420d-b1bc-3b7054e563fd', title: 'AirConsole', description: 'Jogos multiplayer com smartphone', url: 'https://airconsole.com/', category: 'Jogos', categoryId: '4cec12d0-79ad-4f6f-a711-a78dc2d219f9' },
+  { id: '9aee02f6-3455-4869-a4a9-ea7a673d4757', title: 'Hordes.io', description: 'MMORPG no navegador', url: 'https://hordes.io/', category: 'Jogos', categoryId: '4cec12d0-79ad-4f6f-a711-a78dc2d219f9' },
+  { id: '34803ad9-015c-42b6-9628-9b5bc8c1c09e', title: 'Dungeon Scrawl', description: 'Criador de mapas para RPG', url: 'https://dungeonscrawl.com/', category: 'Jogos', categoryId: '4cec12d0-79ad-4f6f-a711-a78dc2d219f9' },
+  { id: 'e93b63ec-e5a0-4310-9519-7161b56430bd', title: 'Gamestalgia', description: 'Jogos nostálgicos online', url: 'https://gamestalgia.net/', category: 'Jogos', categoryId: '4cec12d0-79ad-4f6f-a711-a78dc2d219f9' },
+  { id: 'e9dd37f7-fb96-445e-9aa2-d83286d32c9c', title: 'MESS Emulator', description: 'Emulador multi-sistema', url: 'https://mess.eu.org/', category: 'Jogos', categoryId: '4cec12d0-79ad-4f6f-a711-a78dc2d219f9' },
+  { id: 'a06f99ba-1032-48de-8585-1014b8bd003f', title: 'Playest Cloud', description: 'Jogos em nuvem', url: 'https://playestcloud.com/', category: 'Jogos', categoryId: '4cec12d0-79ad-4f6f-a711-a78dc2d219f9' },
+  { id: '04cf9a3a-6ac6-4d72-8cff-5f482dc8e445', title: 'PCOL', description: 'Jogos online', url: 'https://heyzxz.me/pcol', category: 'Jogos', categoryId: '4cec12d0-79ad-4f6f-a711-a78dc2d219f9' },
+
+  // Educação e Cursos
+  { id: '9e50f1d0-36ed-4ed6-93d5-e668c2386eed', title: 'Class Central', description: 'Agregador de cursos online', url: 'https://classcentral.com/', category: 'Educação e Cursos', categoryId: '954cd15f-72a1-49f5-9900-6338411f2413' },
+  { id: '4fbf50ce-0e87-41ed-a4b5-e534984069b7', title: 'Aprenda Mais MEC', description: 'Cursos gratuitos do governo', url: 'https://aprendamais.mec.gov.br/', category: 'Educação e Cursos', categoryId: '954cd15f-72a1-49f5-9900-6338411f2413' },
+  { id: 'c1199768-ab66-419e-8d85-1844c9a5b3b5', title: 'Lecsen', description: 'Plataforma de ensino', url: 'https://lecsen.com/', category: 'Educação e Cursos', categoryId: '954cd15f-72a1-49f5-9900-6338411f2413' },
+  { id: 'b7d4e95d-685d-420b-8787-eb0dc98d96b9', title: 'TypingClub', description: 'Aprender digitação', url: 'https://typingclub.com/', category: 'Educação e Cursos', categoryId: '954cd15f-72a1-49f5-9900-6338411f2413' },
+  { id: '8f9078bf-8fd1-4868-bbc3-b29846f4cbfb', title: 'Cymath', description: 'Solucionador de matemática', url: 'https://cymath.com/', category: 'Educação e Cursos', categoryId: '954cd15f-72a1-49f5-9900-6338411f2413' },
+  { id: '47ec9e8a-0efe-4ed0-8c39-0e4692187c28', title: 'Internet Archive', description: 'Biblioteca digital gratuita', url: 'https://archive.org/', category: 'Educação e Cursos', categoryId: '954cd15f-72a1-49f5-9900-6338411f2413' },
+  { id: '079ea172-8aa4-43da-91bc-dca0031637f8', title: 'PhET Colorado', description: 'Simulações interativas de ciências', url: 'https://phet.colorado.edu/', category: 'Educação e Cursos', categoryId: '954cd15f-72a1-49f5-9900-6338411f2413' },
+  { id: '2f85bc47-cd9d-4e9c-bd30-5ac927564ea6', title: 'Brainly Test Prep', description: 'Preparação para testes', url: 'https://brainly.com/app/test-prep', category: 'Educação e Cursos', categoryId: '954cd15f-72a1-49f5-9900-6338411f2413' },
+  { id: '20bfbdad-30b1-4326-82c4-e321e373536a', title: 'Mind Luster', description: 'Cursos online gratuitos', url: 'https://mindluster.com/', category: 'Educação e Cursos', categoryId: '954cd15f-72a1-49f5-9900-6338411f2413' },
+  { id: '1172417d-903c-4cae-8dd3-eb931bb2c832', title: 'Kiddo Worksheets', description: 'Atividades educacionais infantis', url: 'https://kiddoworksheets.com/', category: 'Educação e Cursos', categoryId: '954cd15f-72a1-49f5-9900-6338411f2413' },
+  { id: 'aa8695ce-9d0f-4dcd-be45-4df50d1110ea', title: 'App Lexi', description: 'Aprendizado de idiomas', url: 'https://app.lexilexi.ai/', category: 'Educação e Cursos', categoryId: '954cd15f-72a1-49f5-9900-6338411f2413' },
+  { id: '130960bd-68b9-4574-a0ef-82bd8f1853b4', title: 'Estudar Fora', description: 'Bolsas de estudo internacionais', url: 'https://paginas.estudarfora.org.br/', category: 'Educação e Cursos', categoryId: '954cd15f-72a1-49f5-9900-6338411f2413' },
+  { id: '271fda70-83b7-474e-9a18-31bf70d8c055', title: 'Alison', description: 'Cursos online certificados', url: 'https://alison.com/', category: 'Educação e Cursos', categoryId: '954cd15f-72a1-49f5-9900-6338411f2413' },
+  { id: '45baa625-08c7-4a85-957a-5dffbdcba5c1', title: 'CodeCombat', description: 'Aprender programação jogando', url: 'https://codecombat.com/', category: 'Educação e Cursos', categoryId: '954cd15f-72a1-49f5-9900-6338411f2413' },
+  { id: 'b012cef3-6087-4f70-9074-c671352d0e2b', title: 'Flukeout', description: 'Jogo para aprender CSS', url: 'https://flukeout.github.io/', category: 'Educação e Cursos', categoryId: '954cd15f-72a1-49f5-9900-6338411f2413' },
+  { id: '611aa54a-2f28-4032-80da-d95ff500d0db', title: 'CSS Grid Garden', description: 'Aprender CSS Grid jogando', url: 'https://cssgridgarden.com/', category: 'Educação e Cursos', categoryId: '954cd15f-72a1-49f5-9900-6338411f2413' },
+  { id: '417b416c-97bf-4969-bbcd-77c06570c62a', title: 'Flexbox Froggy', description: 'Aprender Flexbox jogando', url: 'https://flexboxfroggy.com/', category: 'Educação e Cursos', categoryId: '954cd15f-72a1-49f5-9900-6338411f2413' },
+  { id: '3198c43d-58be-4ad0-8290-7581788d06bd', title: 'CodinGame', description: 'Programação através de jogos', url: 'https://codingame.com/', category: 'Educação e Cursos', categoryId: '954cd15f-72a1-49f5-9900-6338411f2413' },
+  { id: '9a4382cf-b916-4a84-bc92-bc1a0227f099', title: 'Learn Git Branching', description: 'Aprender Git de forma visual', url: 'https://learngitbranching.js.org/', category: 'Educação e Cursos', categoryId: '954cd15f-72a1-49f5-9900-6338411f2413' },
+  { id: '4a8d6609-7653-4e48-87f9-073f149479c0', title: 'Lightbot', description: 'Programação para iniciantes', url: 'https://lightbot.lu/', category: 'Educação e Cursos', categoryId: '954cd15f-72a1-49f5-9900-6338411f2413' },
+
+  // Livros e Leitura
+  { id: '878fc364-bb18-4577-ad6d-3e24b4814cf2', title: 'DLivros', description: 'Biblioteca de livros digitais', url: 'https://dlivros.com/', category: 'Livros e Leitura', categoryId: 'a8e415d8-0a77-47cc-bf4a-2972803a4257' },
+  { id: '2aa1ba76-eadd-4ab1-9ffe-36e50a375707', title: 'eLivros', description: 'Download de ebooks gratuitos', url: 'https://elivros.info/', category: 'Livros e Leitura', categoryId: 'a8e415d8-0a77-47cc-bf4a-2972803a4257' },
+  { id: '24e896c0-ae1d-4407-b154-cee161984879', title: 'Open Library', description: 'Biblioteca aberta e gratuita', url: 'https://openlibrary.org/', category: 'Livros e Leitura', categoryId: 'a8e415d8-0a77-47cc-bf4a-2972803a4257' },
+  { id: 'af73e28e-0545-42e3-af46-cdf5c0b9c547', title: 'Internet Archive', description: 'Acervo digital de livros e mídia', url: 'https://archive.org/', category: 'Livros e Leitura', categoryId: 'a8e415d8-0a77-47cc-bf4a-2972803a4257' },
+  { id: '57cc6528-feae-4008-825a-9f3cee8dd489', title: 'Liber3', description: 'Biblioteca descentralizada', url: 'https://liber3.eth.limo/', category: 'Livros e Leitura', categoryId: 'a8e415d8-0a77-47cc-bf4a-2972803a4257' },
+
+  // Desenvolvimento
+  { id: '0c8e7aea-f070-499d-8d7a-88bb2ce5a895', title: 'Roadmap.sh', description: 'Roteiros de carreira em tech', url: 'https://roadmap.sh/', category: 'Desenvolvimento', categoryId: '4d75d096-271b-46d7-8dea-4a109438bdcd' },
+  { id: '35fe2fa9-5b4b-4000-95fb-23922dbd6773', title: 'GitHub', description: 'Plataforma de código', url: 'https://github.com/', category: 'Desenvolvimento', categoryId: '4d75d096-271b-46d7-8dea-4a109438bdcd' },
+  { id: '11814533-43b7-4203-ae1f-9562a7d08957', title: 'CodeCombat', description: 'Aprender código jogando', url: 'https://codecombat.com/', category: 'Desenvolvimento', categoryId: '4d75d096-271b-46d7-8dea-4a109438bdcd' },
+  { id: '51860cc8-1c72-4758-89b2-23033bbd54fa', title: 'CodinGame', description: 'Desafios de programação', url: 'https://codingame.com/', category: 'Desenvolvimento', categoryId: '4d75d096-271b-46d7-8dea-4a109438bdcd' },
+  { id: '890fb6ab-40a5-47a7-aebc-f96fdab72a82', title: 'React Bits', description: 'Componentes React animados', url: 'https://reactbits.dev/', category: 'Desenvolvimento', categoryId: '4d75d096-271b-46d7-8dea-4a109438bdcd' },
+  { id: '8ad49513-051d-4290-a279-7ae718f3bb04', title: 'Spline Community', description: 'Design 3D para web', url: 'https://apple.com/app/spline/community', category: 'Desenvolvimento', categoryId: '4d75d096-271b-46d7-8dea-4a109438bdcd' },
+  { id: 'adc5eb08-bdef-4123-9378-cf0ba48e7870', title: 'Emergent', description: 'Desenvolvimento full-stack com IA', url: 'https://app.emergent.sh/', category: 'Desenvolvimento', categoryId: '4d75d096-271b-46d7-8dea-4a109438bdcd' },
+
+  // Design
+  { id: '12fe4e08-2be3-4983-ac67-d02b24aa720d', title: 'Freepik', description: 'Recursos gráficos', url: 'https://freepik.com/', category: 'Design', categoryId: 'd2809acf-8779-46a2-8253-a78b99d2d68d' },
+  { id: 'a05c0b69-abb8-434d-b443-3d85a741cfc1', title: 'Recraft AI', description: 'Design generativo', url: 'https://recraft.ai/', category: 'Design', categoryId: 'd2809acf-8779-46a2-8253-a78b99d2d68d' },
+  { id: '27c12fad-9761-456b-b658-55d621c19faf', title: 'Looka', description: 'Criador de logos', url: 'https://looka.com/logo-maker', category: 'Design', categoryId: 'd2809acf-8779-46a2-8253-a78b99d2d68d' },
+  { id: '0dabff3b-0683-458c-bd0a-d9cdd6846a78', title: 'Napkin AI', description: 'Diagramas visuais', url: 'https://napkin.ai/', category: 'Design', categoryId: 'd2809acf-8779-46a2-8253-a78b99d2d68d' },
+  { id: '535e6d26-4608-4159-836a-1782c246c934', title: 'Collov AI', description: 'Design de interiores', url: 'https://collov.ai/', category: 'Design', categoryId: 'd2809acf-8779-46a2-8253-a78b99d2d68d' },
+
+  // Outros
+  { id: '35d58050-ded0-4883-8540-bec08fcfb3d3', title: 'Right Hair AI', description: 'Simulador de cabelo com IA', url: 'https://righthair.ai/', category: 'Outros', categoryId: '9d530a41-510a-4f03-9f63-140f5c377761' },
+  { id: '3f6c1469-ec57-4899-bc82-44fa72bfd2c2', title: 'Geo FS', description: 'Simulador de voo online', url: 'https://geo-fs.com/', category: 'Outros', categoryId: '9d530a41-510a-4f03-9f63-140f5c377761' },
+  { id: 'e0b56fd3-3f2f-4379-857e-2f06c5789417', title: 'TV Garden', description: 'Canais de TV online', url: 'https://tv.garden/', category: 'Outros', categoryId: '9d530a41-510a-4f03-9f63-140f5c377761' },
+  { id: '76506eb1-0bac-4d5c-a1f6-0f7658c59c4d', title: 'X Minus Pro', description: 'Separador de áudio', url: 'https://x-minus.pro/ai', category: 'Outros', categoryId: '9d530a41-510a-4f03-9f63-140f5c377761' },
+  { id: 'c466580c-4731-42a2-81ae-c7504a3d27e8', title: 'ChefGPT', description: 'Receitas com IA', url: 'https://chefgpt.xyz/', category: 'Outros', categoryId: '9d530a41-510a-4f03-9f63-140f5c377761' },
+  { id: '0c5dc2f4-3da1-42eb-b658-ea38b3288403', title: 'Jasper AI LBM', description: 'Relighting de imagens', url: 'https://huggingface.co/spaces/jasperai/LBM_relighting', category: 'Outros', categoryId: '9d530a41-510a-4f03-9f63-140f5c377761' },
+  { id: '8ff8cd7b-c3da-4ced-8812-0e7a0a81122f', title: 'MapGenie', description: 'Mapas interativos de jogos', url: 'https://mapgenie.io/', category: 'Outros', categoryId: '9d530a41-510a-4f03-9f63-140f5c377761' }
+];

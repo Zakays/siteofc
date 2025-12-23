@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Successfully crawled 1 pages from https://prompt-maker-30.preview.emergentagent.com. The HTML content has been saved and should be analyzed to understand the website's structure, design patterns, navigation, content organization, and visual elements for creating a similar website.",
+  "website_url": "https://prompt-maker-30.preview.emergentagent.com",
+  "total_pages": 1,
+  "combined_summary": "页面 1: https://prompt-maker-30.preview.emergentagent.com\n摘要: 该网页是一个在线资源聚合平台，收集并整理了**158个实用网站**。\n\n1.  **主要内容和主题：** 网站的核心是提供一个经过分类整理的在线工具和资源目录，涵盖人工智能、内容创作、生产力、教育、开发、设计、游戏等多个领域。其中，人工智能（AI）相关工具占据了显著比重。\n2.  **重要的文章标题和链接（分类）：** 页面顶部是网站的总标题“158 sites úteis organizados”（158个有用的网站已整理）。主要分类包括：\n    *   IA e Automação (AI和自动化)\n    *   Criação de Conteúdo (内容创作)\n    *   Ferramentas e Produtividade (工具和生产力)\n    *   Jogos (游戏)\n    *   Educação e Cursos (教育和课程)\n    *   Livros e Leitura (书籍和阅读)\n    *   Desenvolvimento (开发)\n    *   Design (设计)\n    *   Outros (其他)\n    每个分类下包含多个具体网站的名称和访问链接。\n3.  **关键信息和数据：** 网页明确指出整理了“158个”网站。\n4.  **网页的结构和布局特点：** 页面布局简洁明了。顶部是网站总数和导航（图书馆、类别、收藏）。左侧边栏提供了“所有类别”以及上述各大分类的筛选选项。主体内容区域以列表形式展示所有网站，每个列表项包括所属分类、网站名称（作为链接文本）以及一个“Visitar”（访问）按钮，方便用户快速浏览和跳转。\n",
+  "file_paths": [
+    {
+      "page_number": 1,
+      "url": "https://prompt-maker-30.preview.emergentagent.com",
+      "html_file_path": "/workspace/site_clonado/website_crawl/pages/page_0_prompt-maker-30.preview.emergentagent.com_index.html",
+      "summary": "该网页是一个在线资源聚合平台，收集并整理了**158个实用网站**。\n\n1.  **主要内容和主题：** 网站的核心是提供一个经过分类整理的在线工具和资源目录，涵盖人工智能、内容创作、生产力、教育、开发、设计、游戏等多个领域。其中，人工智能（AI）相关工具占据了显著比重。\n2.  **重要的文章标题和链接（分类）：** 页面顶部是网站的总标题“158 sites úteis organizados”（158个有用的网站已整理）。主要分类包括：\n    *   IA e Automação (AI和自动化)\n    *   Criação de Conteúdo (内容创作)\n    *   Ferramentas e Produtividade (工具和生产力)\n    *   Jogos (游戏)\n    *   Educação e Cursos (教育和课程)\n    *   Livros e Leitura (书籍和阅读)\n    *   Desenvolvimento (开发)\n    *   Design (设计)\n    *   Outros (其他)\n    每个分类下包含多个具体网站的名称和访问链接。\n3.  **关键信息和数据：** 网页明确指出整理了“158个”网站。\n4.  **网页的结构和布局特点：** 页面布局简洁明了。顶部是网站总数和导航（图书馆、类别、收藏）。左侧边栏提供了“所有类别”以及上述各大分类的筛选选项。主体内容区域以列表形式展示所有网站，每个列表项包括所属分类、网站名称（作为链接文本）以及一个“Visitar”（访问）按钮，方便用户快速浏览和跳转。"
+    }
+  ]
+}
