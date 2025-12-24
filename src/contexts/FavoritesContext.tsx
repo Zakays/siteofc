@@ -5,6 +5,7 @@ interface FavoritesContextType {
   addToFavorites: (siteId: string) => void;
   removeFromFavorites: (siteId: string) => void;
   isFavorite: (siteId: string) => boolean;
+  clearFavorites: () => void;
 }
 
 const FavoritesContext = createContext<FavoritesContextType | undefined>(undefined);
@@ -21,30 +22,71 @@ export const FavoritesProvider: React.FC<{ children: React.ReactNode }> = ({ chi
   const [favorites, setFavorites] = useState<string[]>([]);
 
   useEffect(() => {
-    const savedFavorites = localStorage.getItem('favorites');
-    if (savedFavorites) {
-      setFavorites(JSON.parse(savedFavorites));
+    try {
+      const savedFavorites = localStorage.getItem('favorites');
+      if (savedFavorites) {
+        const parsed = JSON.parse(savedFavorites);
+        if (Array.isArray(parsed)) {
+          setFavorites(parsed.filter(id => typeof id === 'string'));
+        } else {
+          localStorage.removeItem('favorites');
+        }
+      }
+    } catch (error) {
+      console.error('Error loading favorites:', error);
+      localStorage.removeItem('favorites');
+      setFavorites([]);
     }
   }, []);
 
   const addToFavorites = (siteId: string) => {
-    const newFavorites = [...favorites, siteId];
-    setFavorites(newFavorites);
-    localStorage.setItem('favorites', JSON.stringify(newFavorites));
+    try {
+      if (typeof siteId !== 'string' || !siteId) return;
+      
+      const newFavorites = [...favorites, siteId];
+      setFavorites(newFavorites);
+      localStorage.setItem('favorites', JSON.stringify(newFavorites));
+    } catch (error) {
+      console.error('Error adding to favorites:', error);
+    }
   };
 
   const removeFromFavorites = (siteId: string) => {
-    const newFavorites = favorites.filter(id => id !== siteId);
-    setFavorites(newFavorites);
-    localStorage.setItem('favorites', JSON.stringify(newFavorites));
+    try {
+      const newFavorites = favorites.filter(id => id !== siteId);
+      setFavorites(newFavorites);
+      localStorage.setItem('favorites', JSON.stringify(newFavorites));
+    } catch (error) {
+      console.error('Error removing from favorites:', error);
+    }
   };
 
   const isFavorite = (siteId: string) => {
-    return favorites.includes(siteId);
+    try {
+      return favorites.includes(siteId);
+    } catch (error) {
+      console.error('Error checking favorite:', error);
+      return false;
+    }
+  };
+
+  const clearFavorites = () => {
+    try {
+      setFavorites([]);
+      localStorage.removeItem('favorites');
+    } catch (error) {
+      console.error('Error clearing favorites:', error);
+    }
   };
 
   return (
-    <FavoritesContext.Provider value={{ favorites, addToFavorites, removeFromFavorites, isFavorite }}>
+    <FavoritesContext.Provider value={{ 
+      favorites, 
+      addToFavorites, 
+      removeFromFavorites, 
+      isFavorite, 
+      clearFavorites 
+    }}>
       {children}
     </FavoritesContext.Provider>
   );

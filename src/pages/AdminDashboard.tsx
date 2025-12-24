@@ -13,7 +13,7 @@ import { useNavigate } from 'react-router-dom';
 
 const AdminDashboard = () => {
   const { logout, isAdmin } = useAuth();
-  const { sites, addSite, removeSite } = useSites();
+  const { sites, addSite, removeSite, clearCustomSites } = useSites();
   const navigate = useNavigate();
   
   const [bulkUrls, setBulkUrls] = useState('');
@@ -36,49 +36,87 @@ const AdminDashboard = () => {
   };
 
   const handleAddSite = () => {
-    if (!newSite.title || !newSite.url || !newSite.categoryId) return;
-    
-    const category = categories.find(cat => cat.id === newSite.categoryId);
-    if (!category) return;
+    try {
+      if (!newSite.title || !newSite.url || !newSite.categoryId) {
+        alert('Por favor, preencha todos os campos obrigatórios.');
+        return;
+      }
+      
+      // Validar URL
+      try {
+        new URL(newSite.url);
+      } catch {
+        alert('Por favor, insira uma URL válida.');
+        return;
+      }
+      
+      const category = categories.find(cat => cat.id === newSite.categoryId);
+      if (!category) {
+        alert('Categoria inválida.');
+        return;
+      }
 
-    addSite({
-      ...newSite,
-      category: category.name
-    });
+      addSite({
+        ...newSite,
+        category: category.name
+      });
 
-    setNewSite({
-      title: '',
-      description: '',
-      url: '',
-      categoryId: '',
-      category: ''
-    });
+      setNewSite({
+        title: '',
+        description: '',
+        url: '',
+        categoryId: '',
+        category: ''
+      });
+      
+      alert('Site adicionado com sucesso!');
+    } catch (error) {
+      console.error('Erro ao adicionar site:', error);
+      alert('Erro ao adicionar site. Tente novamente.');
+    }
   };
 
   const handleBulkAdd = () => {
-    const urls = bulkUrls.split('\n').filter(url => url.trim());
-    
-    urls.forEach(url => {
-      const cleanUrl = url.trim();
-      if (cleanUrl) {
-        try {
-          const domain = new URL(cleanUrl).hostname;
-          const title = domain.replace('www.', '').split('.')[0];
-          
-          addSite({
-            title: title.charAt(0).toUpperCase() + title.slice(1),
-            description: `Site: ${domain}`,
-            url: cleanUrl,
-            categoryId: '9d530a41-510a-4f03-9f63-140f5c377761', // Outros
-            category: 'Outros'
-          });
-        } catch (error) {
-          console.error('URL inválida:', cleanUrl);
-        }
+    try {
+      const urls = bulkUrls.split('\n').filter(url => url.trim());
+      
+      if (urls.length === 0) {
+        alert('Por favor, insira pelo menos uma URL.');
+        return;
       }
-    });
-    
-    setBulkUrls('');
+      
+      let successCount = 0;
+      let errorCount = 0;
+      
+      urls.forEach(url => {
+        const cleanUrl = url.trim();
+        if (cleanUrl) {
+          try {
+            const urlObj = new URL(cleanUrl);
+            const domain = urlObj.hostname;
+            const title = domain.replace('www.', '').split('.')[0];
+            
+            addSite({
+              title: title.charAt(0).toUpperCase() + title.slice(1),
+              description: `Site: ${domain}`,
+              url: cleanUrl,
+              categoryId: '9d530a41-510a-4f03-9f63-140f5c377761', // Outros
+              category: 'Outros'
+            });
+            successCount++;
+          } catch (error) {
+            console.error('URL inválida:', cleanUrl, error);
+            errorCount++;
+          }
+        }
+      });
+      
+      setBulkUrls('');
+      alert(`Sites adicionados: ${successCount}\nErros: ${errorCount}`);
+    } catch (error) {
+      console.error('Erro no bulk add:', error);
+      alert('Erro ao adicionar sites em lote. Tente novamente.');
+    }
   };
 
   const customSites = sites.filter(site => 
@@ -99,6 +137,19 @@ const AdminDashboard = () => {
               <Button variant="outline" onClick={() => navigate('/')}>
                 <ExternalLink className="h-4 w-4 mr-2" />
                 Ver Site
+              </Button>
+              <Button 
+                variant="outline" 
+                onClick={() => {
+                  if (confirm('Tem certeza que deseja limpar todos os sites personalizados? Esta ação não pode ser desfeita.')) {
+                    clearCustomSites();
+                    alert('Sites personalizados removidos com sucesso!');
+                  }
+                }}
+                className="text-orange-600 hover:text-orange-700"
+              >
+                <Trash2 className="h-4 w-4 mr-2" />
+                Limpar Dados
               </Button>
               <Button variant="destructive" onClick={handleLogout}>
                 <LogOut className="h-4 w-4 mr-2" />
